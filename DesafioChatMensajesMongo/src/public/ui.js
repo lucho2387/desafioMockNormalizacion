@@ -10,9 +10,9 @@ const mensajeUi = mensaje => {
                             em { font-style: italic; color: green; }
                             span {font-style: normal; color: #804000;}
                         </style>
-                        <strong>${mensaje.id}</strong>
+                        <strong>${mensaje.author.id}</strong>
                         [<span>${mensaje.createdAt}</span>] : 
-                        <em>${mensaje.mensaje}</em>
+                        <em>${mensaje.text}</em>
                     </div>`
     return div
 }
@@ -37,3 +37,4 @@ export const onHandleSubmit = (e) =>{
 export const agregarMensajes = mensaje => {
     listaMensajes.append(mensajeUi(mensaje))
 }
+
