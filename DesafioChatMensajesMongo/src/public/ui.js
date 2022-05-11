@@ -18,6 +18,7 @@ const mensajeUi = mensaje => {
 }
 
 export const renderMensajes = mensajes => {
+    listaMensajes.innerHTML = ''
     mensajes.forEach(mensaje => listaMensajes.append(mensajeUi(mensaje)))
 }
 
