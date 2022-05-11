@@ -1,7 +1,8 @@
 import { Schema, model } from "mongoose";
 
 const MensajeSchema = new Schema (
-    {
+    { 
+      author: {
         id : {
             type:String,
             required: true
@@ -26,15 +27,19 @@ const MensajeSchema = new Schema (
             type:String,
             required: true
         },
-        mensaje: {
-                    type:String,
-                    required: true
-                }
+    },
+
+        text: {
+                type:String,
+                required: true
+               }
+   
     },
     {
         timestamps: true,
         versionKey: false
     }
+   
 )
 
 export default model('Mensaje', MensajeSchema)
