@@ -9,7 +9,7 @@ const mensajeUi = mensaje => {
                             strong { font-weight:700; color: blue; }
                             em { font-style: italic; color: green; }
                             span {font-style: normal; color: #804000;}
-                             img {max-width: 5%; max-height: 5%;}
+                             img {max-width: 3%; max-height: 3%;}
                         </style>
                         <strong>${mensaje.author.id}</strong>
                         [<span>${mensaje.createdAt}</span>] : 
