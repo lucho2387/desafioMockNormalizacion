@@ -24,7 +24,7 @@ export default (io) => {
         datos.text = mensaje.text
         const nuevoMensaje = new Mensaje(datos)
         const guardarMensaje = await nuevoMensaje.save()
-        socket.emit('servidor:nuevoMensaje', guardarMensaje)
+        io.emit('servidor:nuevoMensaje', guardarMensaje)
     })
   })
 }
