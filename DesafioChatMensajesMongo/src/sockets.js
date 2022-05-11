@@ -11,7 +11,18 @@ export default (io) => {
     emitMensajes()
 
     socket.on('cliente:nuevoMensaje', async (mensaje) => {
-        const nuevoMensaje = new Mensaje(mensaje)
+        const datos = {
+          author: {
+            id: mensaje.id,
+            nombre: mensaje.nombre,
+            apellido: mensaje.apellido,
+            edad: mensaje.edad,
+            alias: mensaje.alias,
+            avatar: mensaje.avatar
+          }
+        }
+        datos.text = mensaje.text
+        const nuevoMensaje = new Mensaje(datos)
         const guardarMensaje = await nuevoMensaje.save()
         socket.emit('servidor:nuevoMensaje', guardarMensaje)
     })
