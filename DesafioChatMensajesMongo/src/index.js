@@ -4,6 +4,8 @@ import http from "http";
 import { conexionDB } from "./db";
 import sockets from "./sockets";
 // import { PORT } from "./config";
+const { normalize, schema } = require('normalizr');
+const util = require('util');
 
 conexionDB();
 
@@ -16,3 +18,24 @@ sockets(io);
 // console.log("Server on http://localhost:", PORT);
 
 
+// Normalizacion
+
+const author = new schema.Entity('authors');
+
+const mensaje = new schema.Entity('mensajes', {
+    author: author,
+});
+
+
+const messagesSchema = new schema.Array(mensaje);
+
+const dataNormalizada = normalize(mensajes, messagesSchema)
+console.log(dataNormalizada)
+
+function printData(data) {
+  console.log(util.inspect(data, false, 12, true));
+}
+
+printData(dataNormalizada)
+
+console.log(JSON.stringify(mensajes).length, JSON.stringify(dataNormalizada).length)
