@@ -21,85 +21,92 @@ sockets(io);
 // Normalizacion
 
 const mensajes = [
-        {
-          "author": {
-            "id": "fm230499@gmail.com",
-            "nombre": "Francisco",
-            "apellido": "Messina",
-            "alias": "asdasdasd",
-            "edad": "48",
-            "avatar": "dasdasdasd"
-          },
-          "text": "asdasd",
-          "date": "2022-05-08T14:13:53.605Z",
-          "id": 1
-        },
-        {
-          "author": {
-            "id": "fm230499@gmail.com",
-            "nombre": "Francisco",
-            "apellido": "Messina",
-            "alias": "asdasdas",
-            "edad": "121",
-            "avatar": "asdasdasdasd"
-          },
-          "text": "Mensaje",
-          "date": "2022-05-08T14:22:29.033Z",
-          "id": 2
-        },
-        {
-          "author": {
-            "id": "fm230499@gmail.com",
-            "nombre": "Francisco",
-            "apellido": "Messina",
-            "alias": "asdasdas",
-            "edad": "123",
-            "avatar": "asdasd"
-          },
-          "text": "asdasd",
-          "date": "2022-05-08T14:22:37.160Z",
-          "id": 3
-        },
-        {
-          "author": {
-            "id": "aasdasdasd",
-            "nombre": "asdasd",
-            "apellido": "asdasd",
-            "alias": "asdasdas",
-            "edad": "18",
-            "avatar": "asdasd"
-          },
-          "text": "asadas",
-          "date": "2022-05-08T14:28:14.652Z",
-          "id": 4
-        },
-        {
-          "author": {
-            "id": "asdasdas",
-            "nombre": "adsas",
-            "apellido": "dasdsad",
-            "alias": "asdasd",
-            "edad": "123",
-            "avatar": "asdasd"
-          },
-          "text": "adsdasd",
-          "date": "2022-05-08T14:28:20.478Z",
-          "id": 5
-        },
-        {
-          "author": {
-            "id": "fm230499@gmail.com",
-            "nombre": "Francisco",
-            "apellido": "Messina",
-            "alias": "asda",
-            "edad": "123",
-            "avatar": "sdasdas"
-          },
-          "text": "asd",
-          "date": "2022-05-08T14:28:25.677Z",
-          "id": 6
-        }
-]
+    {
+      "author": {
+        "id": "sebadorado@hotmail.com",
+        "nombre": "Seba",
+        "apellido": "Dorado",
+        "alias": "Seba",
+        "edad": "32",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-BFO1-9_B8owATZcfnZc6FwA8GJjr-RMwHg&usqp=CAU"
+      },
+      "text": "Hola Como van con el Desafio??",
+      "id": 1
+    },
+    {
+      "author": {
+        "id": "lucho@hotmail.com",
+        "nombre": "Luis",
+        "apellido": "Juarez",
+        "alias": "Lucho",
+        "edad": "35",
+        "avatar": "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-128.png"
+      },
+      "text": "Aca viendo si termino, toy con el tiempo justo.",
+      "id": 2
+    },
+    {
+      "author": {
+        "id": "marijo@gmail.com",
+        "nombre": "Maria",
+        "apellido": "Alia",
+        "alias": "Nena",
+        "edad": "63",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgUdKKN_-VqTxuUYL19hj0HWB0wZHNxgBd7A&usqp=CAU"
+      },
+      "text": "Hola chicos, trantando tambien de terminar el desafio, se me complico el tema de normalizacion.",
+      "id": 3
+    },
+    {
+      "author": {
+        "id": "sebadorado@hotmail.com",
+        "nombre": "Seba",
+        "apellido": "Dorado",
+        "alias": "Seba",
+        "edad": "32",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-BFO1-9_B8owATZcfnZc6FwA8GJjr-RMwHg&usqp=CAU"
+      },
+      "text": "No estan complicado lo de normalizacion",
+      "id": 4
+    },
+    {
+      "author": {
+        "id": "sebadorado@hotmail.com",
+        "nombre": "Seba",
+        "apellido": "Dorado",
+        "alias": "Seba",
+        "edad": "32",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-BFO1-9_B8owATZcfnZc6FwA8GJjr-RMwHg&usqp=CAU"
+      },
+      "text": "Despues hacemos un zoom",
+      "id": 5
+    },
+    {
+      "author": {
+        "id": "lucho@hotmail.com",
+        "nombre": "Luis",
+        "apellido": "Juarez",
+        "alias": "Lucho",
+        "edad": "35",
+        "avatar": "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-128.png"
+      },
+      "text": "Bueno.",
+      "id": 6
+    },
+    {
+      "author": {
+        "id": "sebadorado@hotmail.com",
+        "nombre": "Seba",
+        "apellido": "Dorado",
+        "alias": "Seba",
+        "edad": "32",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-BFO1-9_B8owATZcfnZc6FwA8GJjr-RMwHg&usqp=CAU"
+      },
+      "text": "Ok.",
+      "id": 7
+    }
+  
+  ]
 const author = new schema.Entity('authors');
 
 const mensaje = new schema.Entity('mensajes', {
