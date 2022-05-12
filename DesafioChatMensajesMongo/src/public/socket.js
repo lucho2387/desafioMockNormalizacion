@@ -4,7 +4,7 @@ export const cargarMensajes = (callback) =>{
     socket.on('servidor:cargarMensajes', callback)
 }
 
-export const guardarMensaje = (id,nombre,apellido,edad, alias, avatar, mensaje) =>{
+export const guardarMensaje = (id,nombre,apellido,edad, alias, avatar, text) =>{
     socket.emit('cliente:nuevoMensaje', {
         id,
         nombre,
@@ -12,7 +12,7 @@ export const guardarMensaje = (id,nombre,apellido,edad, alias, avatar, mensaje) 
         edad,
         alias,
         avatar,
-        mensaje
+        text
     })
 }
 
